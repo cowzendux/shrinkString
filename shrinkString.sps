@@ -10,7 +10,7 @@
 * variable it will be ignored. If this argument is not provided, then the function will attempt to shrink
 * all string variables in the data set.
 
-begin program python.
+BEGIN PROGRAM PYTHON3.
 import spss
 
 def descriptive(variable, stat):
@@ -67,7 +67,7 @@ def descriptive(variable, stat):
 		handle,
 		tableSubtype="Statistics",
 		cellAttrib="text")
-          if (float(result[0]) <> 0 and len(result) > 2):
+          if (float(result[0]) != 0 and len(result) > 2):
                return float((result[2]))
 
 def shrinkString(varList = None):
